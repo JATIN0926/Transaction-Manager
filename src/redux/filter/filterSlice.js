@@ -23,12 +23,12 @@ const filterSlice = createSlice({
     setSearchTitle: (state, action) => {
       state.searchTitle = action.payload;
     },
-    clearFilters: (state) => {
-      state.type = null;
-      state.currency = null;
-      state.category = null;
-      state.searchTitle = "";
-    }
+    resetFilters: (state) => {
+      state.type = '';
+      state.currency = '';
+      state.category = '';
+      state.searchTitle = '';
+    },
   }
 });
 
@@ -37,7 +37,7 @@ export const {
   setCurrencyFilter,
   setCategoryFilter,
   setSearchTitle,
-  clearFilters
+  resetFilters
 } = filterSlice.actions;
 
 export default filterSlice.reducer;

@@ -155,7 +155,8 @@ export default function AddTransaction() {
               onChange={handleChange}
               className="w-full p-2 mb-2 border rounded"
             >
-              <option value="EUR">Select a Currency</option>
+              <option value="">Select a Currency</option>
+              <option value="EUR">EUR</option>
               <option value="JPY">JPY</option>
               <option value="USD">USD</option>
               <option value="INR">INR</option>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button, Modal, Select, Textarea, TextInput } from "flowbite-react";
+import {  Select, Textarea, TextInput } from "flowbite-react";
 import { useDispatch } from "react-redux";
 import { editTransaction } from "../../redux/transaction/transactionSlice.js";
 import toast from "react-hot-toast";

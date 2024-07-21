@@ -1,11 +1,15 @@
-import { Avatar, Button, Dropdown, Navbar, TextInput } from "flowbite-react";
+import { Button, Navbar, TextInput } from "flowbite-react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../redux/theme/themeSlice";
+import { setSearchTitle } from "../../redux/filter/filterSlice";
 const Header = () => {
   const disptach = useDispatch();
+  const filters = useSelector((state) => state.filters);
   const { theme } = useSelector((state) => state.theme);
+  const handleSearchTitleChange = (e) =>
+    disptach(setSearchTitle(e.target.value));
   return (
     <Navbar className="border-b-2">
       <a
@@ -18,7 +22,16 @@ const Header = () => {
         Manager
       </a>
 
-      <div className=" flex gap-2 md:order-2">
+      <div className=" flex items-center justify-center gap-4 md:order-2">
+        <TextInput
+          type="text"
+          name="title"
+          placeholder="Enter transaction title"
+          className="w-full"
+          icon={AiOutlineSearch}
+          value={filters.searchTitle}
+          onChange={handleSearchTitleChange}
+        />
         <Button
           className="w-12 h-10 hidden sm:inline"
           color="gray"

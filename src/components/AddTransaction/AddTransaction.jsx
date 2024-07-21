@@ -148,15 +148,19 @@ export default function AddTransaction() {
               className="w-full p-2 mb-2 border rounded"
               required
             />
-            <TextInput
-              type="text"
+            <Select
               name="currency"
-              placeholder="Currency"
+              required
               value={formData.currency}
               onChange={handleChange}
               className="w-full p-2 mb-2 border rounded"
-              required
-            />
+            >
+              <option value="EUR">Select a Currency</option>
+              <option value="JPY">JPY</option>
+              <option value="USD">USD</option>
+              <option value="INR">INR</option>
+              <option value="GBP">GBP</option>
+            </Select>
             <Textarea
               name="note"
               placeholder="Note"

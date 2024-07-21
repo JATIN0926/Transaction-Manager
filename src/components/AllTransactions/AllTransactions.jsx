@@ -55,7 +55,7 @@ const AllTransactions = () => {
   return (
     <div className="w-screen max-w-full px-8 flex flex-col items-start justify-center gap-10">
       <div className="w-full flex items-center justify-between">
-        <h1 className="text-4xl font-semibold text-[#1B1C20] text-center">
+        <h1 className="text-4xl font-semibold text-center">
           All <span className="text-[#712FFF]">Transactions</span> Overview
         </h1>
         <AddTransaction />

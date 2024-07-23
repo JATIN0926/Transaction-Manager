@@ -1,10 +1,9 @@
 import "./App.css";
 import Header from "../src/components/HomePage/Header/Header";
-import AllTransactions from "../src/components/HomePage/AllTransactions/AllTransactions";
-import Visualizations from "../src/components/Visualizations/Visualizations/Visualizations";
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from "./pages/HomePage/HomePage";
+import VisualizationPage from "./pages/VisualizationPage/VisualizationPage";
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/visualizations" element={<Visualizations />} />
+            <Route path="/visualizations" element={<VisualizationPage />} />
           </Routes>
         </div>
       </Router>

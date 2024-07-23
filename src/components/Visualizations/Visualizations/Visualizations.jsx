@@ -1,4 +1,3 @@
-import React from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -14,7 +13,6 @@ import {
 import { useSelector } from "react-redux";
 import PieChart from "../../../utils/PieChart";
 
-// Register the necessary components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -23,14 +21,12 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  ArcElement // Register ArcElement for PieChart
+  ArcElement 
 );
 
 const Visualizations = () => {
   const transactions = useSelector((state) => state.transactions.transactions);
 
-  // Check the transactions data
-  console.log("Transactions:", transactions);
 
   // Process data for line chart
   const monthlyData = transactions.reduce((acc, transaction) => {
@@ -58,21 +54,12 @@ const Visualizations = () => {
     return acc;
   }, {});
 
-  // Check processed monthly data
-  console.log("Monthly Data:", monthlyData);
-
   const months = Object.keys(monthlyData).sort(
     (a, b) => new Date(a) - new Date(b)
   );
   const incomeValues = months.map((month) => monthlyData[month]?.income || 0);
   const expenseValues = months.map((month) => monthlyData[month]?.expense || 0);
 
-  // Check the values for debugging
-  console.log("Months:", months);
-  console.log("Income Values:", incomeValues);
-  console.log("Expense Values:", expenseValues);
-
-  // Data for the line chart
   const lineData = {
     labels: months,
     datasets: [
@@ -83,8 +70,8 @@ const Visualizations = () => {
         fill: false,
         tension: 0.1,
         backgroundColor: "rgba(76,175,80,0.2)",
-        pointRadius: 5, // Adjust the point size
-        pointHoverRadius: 8, // Adjust the hover point size
+        pointRadius: 5, 
+        pointHoverRadius: 8, 
       },
       {
         label: "Expense",
@@ -93,8 +80,8 @@ const Visualizations = () => {
         fill: false,
         tension: 0.1,
         backgroundColor: "rgba(244,67,54,0.2)",
-        pointRadius: 5, // Adjust the point size
-        pointHoverRadius: 8, // Adjust the hover point size
+        pointRadius: 5, 
+        pointHoverRadius: 8, 
       },
     ],
   };
@@ -121,7 +108,7 @@ const Visualizations = () => {
           text: "Month",
         },
         grid: {
-          display: false, // Optional: hide grid lines for x-axis
+          display: false,
         },
       },
       y: {
@@ -131,7 +118,7 @@ const Visualizations = () => {
         },
         beginAtZero: true,
         grid: {
-          drawBorder: false, // Optional: hide border on y-axis
+          drawBorder: false,
         },
       },
     },

@@ -27,7 +27,7 @@ const AllTransactions = () => {
   };
 
   return (
-    <div className="w-screen max-w-full px-8 flex items-start justify-between gap-10 mt-24">
+    <div id="AllTransactions" className="w-screen max-w-full px-8 flex items-start justify-between gap-10 mt-24">
       <div className="w-[30%]">
         <Filtering_Sidebar />
       </div>

@@ -74,7 +74,7 @@ export default function AddTransaction() {
   return (
     <>
       <Button
-        className="bg-[#712FFF]"
+        className="bg-[#712FFF] text-base"
         pill
         color="purple"
         outline

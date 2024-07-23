@@ -1,7 +1,7 @@
 import { MdDeleteSweep } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { removeTransaction } from "../../redux/transaction/transactionSlice";
+import { removeTransaction } from "../../../redux/transaction/transactionSlice.js";
 import toast from "react-hot-toast";
 
 const TransactionCard = ({
@@ -13,7 +13,7 @@ const TransactionCard = ({
   currency,
   note,
   id,
-  onEdit, // Add onEdit prop
+  onEdit,
 }) => {
   const dispatch = useDispatch();
 

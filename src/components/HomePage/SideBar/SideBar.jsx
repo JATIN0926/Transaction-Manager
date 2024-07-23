@@ -1,5 +1,4 @@
 "use client";
-
 import { Sidebar, Label, Radio, Button } from "flowbite-react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -7,7 +6,7 @@ import {
   setCurrencyFilter,
   setCategoryFilter,
   resetFilters,
-} from "../../redux/filter/filterSlice.js";
+} from "../../../redux/filter/filterSlice.js";
 
 export default function Filtering_Sidebar() {
   const dispatch = useDispatch();

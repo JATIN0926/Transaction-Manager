@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import initialTransactions from "../../data/initialTransactions.js";
 
 const initialState = {
-  transactions: [],
+  transactions: initialTransactions,
   loading: false,
   error: null,
 };

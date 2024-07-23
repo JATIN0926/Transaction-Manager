@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Modal, Select, Textarea, TextInput } from "flowbite-react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTransaction } from "../../redux/transaction/transactionSlice.js";
+import { addTransaction } from "../../../redux/transaction/transactionSlice.js";
 import toast from "react-hot-toast";
 export default function AddTransaction() {
   const [openModal, setOpenModal] = useState(false);
@@ -82,7 +82,7 @@ export default function AddTransaction() {
       >
         Add Transaction
       </Button>
-      <Modal show={openModal} onClose={() => setOpenModal(false)}>
+      <Modal show={openModal} onClose={() => setOpenModal(false)} className="z-[200]">
         <Modal.Header className=" text-3xl font-bold">
           Add a <span className="text-[#712FFF]">Transaction!</span>{" "}
         </Modal.Header>

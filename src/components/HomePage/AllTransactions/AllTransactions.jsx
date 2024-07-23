@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import TransactionCard from "../TransactionCard/TransactionCard";
 import Filtering_Sidebar from "../SideBar/SideBar";
-import { applyFilters } from "../../utils/filters";
+import { applyFilters } from "../../../utils/filters";
 import { useState } from "react";
 import AddTransaction from "../AddTransaction/AddTransaction";
 import { Modal } from "flowbite-react";
@@ -27,7 +27,7 @@ const AllTransactions = () => {
   };
 
   return (
-    <div className="w-screen max-w-full px-8 flex items-start justify-between gap-10">
+    <div className="w-screen max-w-full px-8 flex items-start justify-between gap-10 mt-24">
       <div className="w-[30%]">
         <Filtering_Sidebar />
       </div>
@@ -55,7 +55,7 @@ const AllTransactions = () => {
 
       {/* Edit Transaction Modal */}
       {isEditModalOpen && selectedTransaction && (
-        <Modal show={isEditModalOpen} onClose={handleCloseEditModal}>
+        <Modal show={isEditModalOpen} onClose={handleCloseEditModal} className="z-[200]">
           <Modal.Header>Edit Transaction</Modal.Header>
           <Modal.Body>
             <EditTransaction

@@ -4,6 +4,7 @@ import AllTransactions from "../src/components/HomePage/AllTransactions/AllTrans
 import Visualizations from "../src/components/Visualizations/Visualizations/Visualizations";
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <div className="flex flex-col max-w-screen gap-8">
           <Header />
           <Routes>
-            <Route path="/" element={<AllTransactions />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/visualizations" element={<Visualizations />} />
           </Routes>
         </div>

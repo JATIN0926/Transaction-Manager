@@ -1,4 +1,4 @@
-// NoResultsAnimation.js
+
 import React, { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 import animationData from '../data/no_results.json';
